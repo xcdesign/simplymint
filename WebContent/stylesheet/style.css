@@ -1,0 +1,10 @@
+#container {
+    position : relative;
+    width    :100%;
+}
+#container img {
+    position : absolute;
+    width    : 100%;
+    top:50%;
+    left:50%;
+}

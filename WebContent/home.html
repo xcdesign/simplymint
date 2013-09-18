@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>SimplyMint</title>
 <link rel="stylesheet" href="stylesheet/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script type="text/javascript" src="script/mint.js"></script>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-<div id="top">
-	<div id="header">
-		<div id="nav">
-		</div>
-	</div>
-	<div id="parlor">
-	</div>
+<div style="position:relative;left:50%" id="control">
+	
+	<a onclick="zoomblur();">Zoom Blur</a>
+	<!--
+	<a onclick="blurzoom();">Blur Zoom</a>
+	<a onclick="slideup();">hide</a>
+	  -->
+	<a onclick="slidedown();">show</a>
 </div>
-<div id="middle">
+<div id="container" onclick="slidedown();">
+	<img id="zoom" src="images/img3.jpg" />
+ 	<img id="blur" class="large" src="images/img2.jpg" />
+   	<img id="large" class="large"src="images/img1.jpg" /> 
 </div>
-<div id="bottom">
-</div>
+
 </body>
 </html>
