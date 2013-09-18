@@ -1,4 +1,4 @@
-function blurzoom(){
+/*function blurzoom(){
 	//$('#large').bind('click', function () {
 		//$("#zoom").css({"display":"none"});
 		$("#large").animate({opacity:0},500,function(){
@@ -6,24 +6,6 @@ function blurzoom(){
 			
 	});    
 }
-
-function zoomblur(){
-	//$("#zoom").css({"display":"none"});
-	/*$("#zoom").show("scale",
-			{
-		        duration: 600,
-		        //easing: "easeOutBounce"
-		    },
-			function(){});*/
-	$(".large").animate({opacity:0.5},50,function(){
-		$(".large").animate({width:"300%",top: "-50%",
-	        left: "-50%"},800,function(){});
-		$(".large").animate({opacity:0},10,function(){});
-	});	
-	
-	
-}
-
 function slideup(){
 	$("#blur").css({opacity:0});
 	$("#large").hide(1000,function(){});
@@ -41,5 +23,22 @@ function slidedown(){
 		        easing: "easeOutBounce"
 		    })
 	.animate({ opacity : 1 }, { duration: 1500, queue: false });
+	
+}*/
+
+function zoomblur(){
+	//$("#zoom").css({"display":"none"});
+	/*$("#zoom").show("scale",
+			{
+		        duration: 600,
+		        //easing: "easeOutBounce"
+		    },
+			function(){});*/
+	$(".large").animate({opacity:0.5},50,function(){
+		$(".large").animate({width:"300%",top: "-50%",
+	        left: "-50%"},2000,function(){});
+		$(".large").animate({opacity:0},500,function(){});
+	});	
+	
 	
 }
