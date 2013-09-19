@@ -45,7 +45,52 @@ function zoomblur(){
 
 $(function(){
 	$("#up").bind("click",function(){
-		$("#slide").slideUp();
+		if($("#slide").css("display") == "none"){
+			$("#slide").slideDown(function(){
+				$("#up").text("up");
+				$("#content").fadeOut();
+				$("#logo").css("position","absolute");
+				$("#nav").css("position","relative");
+				$("#nav").css({"opacity":"1"});
+			});
+		}
+		else{
+			$("#slide").slideUp(function(){
+				$("#up").text("down");
+				$("#content").slideDown();
+				$("#logo").css("position","fixed");
+				$("#nav").css({"position":"fixed"});
+				$("#nav").animate({"opacity":"0.75"},500);
+			});
+		}
 	});
 }
 );
+
+$(function(){
+	$("#right")
+	.mouseenter(function(){
+		$(".stool").animate({left:"-=5%"},500);
+		$("#bar").animate({left:"-=3%"},400);
+		$("#slide").animate({"background-position":"+=3%"},300)
+	})
+	.mouseleave(function(){
+		$(".stool").animate({left:"+=5%"},500);
+		$("#bar").animate({left:"+=3%"},400);
+		$("#slide").animate({"background-position":"-=3%"},300)
+	});
+});
+
+$(function(){
+	$("#left")
+	.mouseenter(function(){
+		$(".stool").animate({left:"+=5%"},500);
+		$("#bar").animate({left:"+=3%"},400);
+		$("#slide").animate({"background-position":"-=3%"},300)
+	})
+	.mouseleave(function(){
+		$(".stool").animate({left:"-=5%"},500);
+		$("#bar").animate({left:"-=3%"},400);
+		$("#slide").animate({"background-position":"+=3%"},300)
+	});
+});
