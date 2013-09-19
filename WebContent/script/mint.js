@@ -42,3 +42,10 @@ function zoomblur(){
 	
 	
 }
+
+$(function(){
+	$("#up").bind("click",function(){
+		$("#slide").slideUp();
+	});
+}
+);
