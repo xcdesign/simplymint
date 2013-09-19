@@ -46,21 +46,21 @@ function zoomblur(){
 $(function(){
 	$("#up").bind("click",function(){
 		if($("#slide").css("display") == "none"){
-			$("#slide").slideDown(function(){
-				$("#up").text("up");
-				$("#content").fadeOut();
-				$("#logo").css("position","absolute");
-				$("#nav").css("position","relative");
+			$("#logo").css("position","absolute");
+			$("#nav").css("position","relative");
+			$("#slide").slideDown(500,"easeOutBounce",function(){
+				$("#up").text("up");	
 				$("#nav").css({"opacity":"1"});
 			});
+			$("#content").hide();
 		}
 		else{
-			$("#slide").slideUp(function(){
+			$("#slide").slideUp(500,"easeInBack",function(){
 				$("#up").text("down");
-				$("#content").slideDown();
+				$("#content").slideDown(600);
 				$("#logo").css("position","fixed");
-				$("#nav").css({"position":"fixed"});
-				$("#nav").animate({"opacity":"0.75"},500);
+				$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
+				$("#nav").animate({"opacity":"0.75"});
 			});
 		}
 	});
@@ -70,27 +70,27 @@ $(function(){
 $(function(){
 	$("#right")
 	.mouseenter(function(){
-		$(".stool").animate({left:"-=5%"},500);
-		$("#bar").animate({left:"-=3%"},400);
-		$("#slide").animate({"background-position":"+=3%"},300)
+		$(".stool").animate({left:"-=4%"},450);
+		$("#bar").animate({left:"-=2%"},450);
+		$("#slide").animate({"background-position":"+=4%"},450);
 	})
 	.mouseleave(function(){
-		$(".stool").animate({left:"+=5%"},500);
-		$("#bar").animate({left:"+=3%"},400);
-		$("#slide").animate({"background-position":"-=3%"},300)
+		$(".stool").animate({left:"+=4%"},450);
+		$("#bar").animate({left:"+=2%"},450);
+		$("#slide").animate({"background-position":"-=4%"},450);
 	});
 });
 
 $(function(){
 	$("#left")
 	.mouseenter(function(){
-		$(".stool").animate({left:"+=5%"},500);
-		$("#bar").animate({left:"+=3%"},400);
-		$("#slide").animate({"background-position":"-=3%"},300)
+		$(".stool").animate({left:"+=4%"},450);
+		$("#bar").animate({left:"+=2%"},450);
+		$("#slide").animate({"background-position":"-=4%"},450);
 	})
 	.mouseleave(function(){
-		$(".stool").animate({left:"-=5%"},500);
-		$("#bar").animate({left:"-=3%"},400);
-		$("#slide").animate({"background-position":"+=3%"},300)
+		$(".stool").animate({left:"-=4%"},450);
+		$("#bar").animate({left:"-=2%"},450);
+		$("#slide").animate({"background-position":"+=4%"},450);
 	});
 });
