@@ -27,12 +27,11 @@
 
 #slide{
 	position:relative;
-	
 	width:100%;
-	min-width:1400px;
-	height:1100px;
-	background-image:url('../images/wall.png');
-	background-size:cover;
+	height:auto;
+	min-width:1024px;
+	min-height:500px;
+	
 }
 
 #slide > .ground{
@@ -40,35 +39,41 @@
 	bottom:-5px;
 }
 
+#slide > #wall{
+	width:100%;
+	height:auto;	
+}
+
 #slide > .stool{
-	width:9%;
+	width:14%;
 	height:auto;
 }
 
 
 #slide > #bar{
-	left:17.5%;
-	width:65%;
+	left:6%;
+	width:88%;
 	height:auto;
+	bottom:6%;
 }
 
 #slide > #stool1{
-	left:21%;
+	left:12%;
 }
 #slide > #stool2{
-	left:31%;
+	left:24.8%;
 }
 #slide > #stool3{
-	left:41%;
+	left:37.6%;
 }
 #slide > #stool4{
-	left:51%;
+	left:50.5%;
 }
 #slide > #stool5{
-	left:61%;
+	left:63.3%;
 }
 #slide > #stool6{
-	left:71%;
+	left:76%;
 }
 
 #control{
@@ -84,11 +89,12 @@
 }
 #nav{
 	width:100%;
-	min-width:1400px;
+	min-width:1024px;
 	height:150px;
 	background:#000000;
 	color:#ffffff;
 	z-index:49;
+	text-align:center;
 }
 
 #content{
@@ -108,7 +114,7 @@
 }
 #box1{
 	opacity:0.6;
-	background-image:url('../images/img1.jpg');
+	background-image:url('../images/img1.png');
 	height:780px;
 }
 

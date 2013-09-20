@@ -49,15 +49,19 @@ $(function(){
 			$("#logo").css("position","absolute");
 			$("#nav").css("position","relative");
 			$("#slide").slideDown(500,"easeOutBounce",function(){
+				backgroundSize();
 				$("#up").text("up");	
 				$("#nav").css({"opacity":"1"});
 			});
 			$("#content").hide();
+			$("#nav").css({"min-width":"1024px"});
+			
 		}
 		else{
 			$("#slide").slideUp(500,"easeInBack",function(){
 				$("#up").text("down");
 				$("#content").slideDown(600);
+				$("#nav").css({"min-width":"650px"});
 				$("#logo").css("position","fixed");
 				$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
 				$("#nav").animate({"opacity":"0.75"});
@@ -71,13 +75,13 @@ $(function(){
 	$("#right")
 	.mouseenter(function(){
 		$(".stool").animate({left:"-=4%"},450);
-		$("#bar").animate({left:"-=2%"},450);
-		$("#slide").animate({"background-position":"+=4%"},450);
+		$("#bar").animate({left:"-=3%"},450);
+		$("#wall").animate({left:"-=2%"},450);
 	})
 	.mouseleave(function(){
 		$(".stool").animate({left:"+=4%"},450);
-		$("#bar").animate({left:"+=2%"},450);
-		$("#slide").animate({"background-position":"-=4%"},450);
+		$("#bar").animate({left:"+=3%"},450);
+		$("#wall").animate({left:"+=2%"},450);
 	});
 });
 
@@ -85,12 +89,48 @@ $(function(){
 	$("#left")
 	.mouseenter(function(){
 		$(".stool").animate({left:"+=4%"},450);
-		$("#bar").animate({left:"+=2%"},450);
-		$("#slide").animate({"background-position":"-=4%"},450);
+		$("#bar").animate({left:"+=3%"},450);
+		$("#wall").animate({left:"+=2%"},450);
 	})
 	.mouseleave(function(){
 		$(".stool").animate({left:"-=4%"},450);
-		$("#bar").animate({left:"-=2%"},450);
-		$("#slide").animate({"background-position":"+=4%"},450);
+		$("#bar").animate({left:"-=3%"},450);
+		$("#wall").animate({left:"-=2%"},450);
 	});
 });
+
+$( window ).resize(function() {
+	backgroundSize();
+	if($( window ).width()<=650){
+	$("#slide").slideUp(500,"easeInBack",function(){
+		$("#up").text("down");
+		$("#content").slideDown(600);
+		$("#nav").css({"min-width":"650px"});
+		$("#logo").css("position","fixed");
+		$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
+		$("#nav").animate({"opacity":"0.75"});
+	});
+	}
+});
+
+window.onload=function(){
+	backgroundSize();
+	if($( window ).width()<=650){
+		$("#slide").hide(function(){
+			$("#up").text("down");
+			$("#content").css("display","inline");
+			$("#nav").css({"min-width":"650px"});
+			$("#logo").css("position","fixed");
+			$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
+			$("#nav").animate({"opacity":"0.75"});
+		});
+	}
+};
+
+
+function backgroundSize(){
+	var img = document.getElementById('wall'); 
+	//or however you get a handle to the IMG
+	var height = img.clientHeight; 
+	$( "#slide" ).css( "height",height );
+}
