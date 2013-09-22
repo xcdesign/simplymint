@@ -49,6 +49,7 @@ $(function(){
 			$("#slide").css("background-image","");
 			$("#logo").css("position","absolute");
 			$("#nav").css("position","relative");
+			$("#content").css("margin-top","150px");
 			$("#slide").slideDown(500,"easeOutBounce",function(){
 				backgroundSize();
 				$("#up").text("up");	
@@ -123,6 +124,12 @@ $(window).resize(function() {
 		$("#nav").animate({"opacity":"0.75"});
 	});
 	}
+	else if($(window).width()/$(window).height() < 1.7){
+		$("#content").css("margin-top","0px");
+		$("#content").slideDown(1000, function(){
+			
+		});
+	}
 	
 });
 
@@ -136,6 +143,12 @@ window.onload=function(){
 			$("#logo").css("position","fixed");
 			$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
 			$("#nav").animate({"opacity":"0.75"});
+		});
+	}
+	else if($(window).width()/$(window).height() < 1.7){
+		$("#content").css("margin-top","0px");
+		$("#content").slideDown(500, function(){
+			
 		});
 	}
 };
