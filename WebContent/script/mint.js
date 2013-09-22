@@ -46,6 +46,7 @@ function zoomblur(){
 $(function(){
 	$("#up").bind("click",function(){
 		if($("#slide").css("display") == "none"){
+			$("#slide").css("background-image","");
 			$("#logo").css("position","absolute");
 			$("#nav").css("position","relative");
 			$("#slide").slideDown(500,"easeOutBounce",function(){
@@ -58,14 +59,16 @@ $(function(){
 			
 		}
 		else{
+			
 			$("#slide").slideUp(500,"easeInBack",function(){
 				$("#up").text("down");
-				$("#content").slideDown(600);
 				$("#nav").css({"min-width":"650px"});
 				$("#logo").css("position","fixed");
 				$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
 				$("#nav").animate({"opacity":"0.75"});
+				$("#slide").css("background-image","url('../images/wall.png')");
 			});
+			$("#content").slideDown(600);
 		}
 	});
 }
