@@ -99,7 +99,16 @@ $(function(){
 	});
 });
 
-$( window ).resize(function() {
+function backgroundSize(){
+	//alert("here");
+	var img = document.getElementById('wall'); 
+	//or however you get a handle to the IMG
+	var height = img.clientHeight; 
+	//alert(height);
+	$( "#slide" ).css( "height",height );
+}
+
+$(window).resize(function() {
 	backgroundSize();
 	if($( window ).width()<=650){
 	$("#slide").slideUp(500,"easeInBack",function(){
@@ -111,11 +120,12 @@ $( window ).resize(function() {
 		$("#nav").animate({"opacity":"0.75"});
 	});
 	}
+	
 });
 
 window.onload=function(){
 	backgroundSize();
-	if($( window ).width()<=650){
+	if($(window).width()<=650){
 		$("#slide").hide(function(){
 			$("#up").text("down");
 			$("#content").css("display","inline");
@@ -128,9 +138,3 @@ window.onload=function(){
 };
 
 
-function backgroundSize(){
-	var img = document.getElementById('wall'); 
-	//or however you get a handle to the IMG
-	var height = img.clientHeight; 
-	$( "#slide" ).css( "height",height );
-}

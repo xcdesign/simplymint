@@ -31,12 +31,13 @@
 	height:auto;
 	min-width:1024px;
 	min-height:500px;
-	
+	background-image:url('../images/wall.png');
+	background-size:100% 100%;
 }
 
 #slide > .ground{
 	position:absolute;
-	bottom:-5px;
+	bottom:0px;
 }
 
 #slide > #wall{
@@ -76,6 +77,11 @@
 	left:76%;
 }
 
+#slide > #readmore{
+	width:100%;
+	height:auto;	
+}
+
 #control{
 	position:absolute;
 	width:100%;
@@ -93,7 +99,7 @@
 	height:150px;
 	background:#000000;
 	color:#ffffff;
-	z-index:49;
+	z-index:50;
 	text-align:center;
 }
 
