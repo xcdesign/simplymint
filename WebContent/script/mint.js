@@ -258,5 +258,19 @@ function responsive(){
 	}
 }
 
-
+$(window).scroll(function(){
+	var ratio = document.getElementById('wall').clientHeight/document.documentElement.scrollTop;
+	if(ratio<=2 && $("#slide").css("position")!="fixed"){
+		var height=document.getElementById('wall').clientHeight;
+		height=height+150;
+		$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
+		$("#logo").css("position","fixed");
+		$("#slide").css("position","fixed");
+		$("#slide").css("top","150px");
+		$("#content").show();
+		$("#readMore").hide();
+		$("#content").css("margin-top",height+"px");
+		$("#content").animate({"margin-top":"150px"},500);
+	}
+});
 
