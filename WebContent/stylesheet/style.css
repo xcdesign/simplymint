@@ -39,6 +39,7 @@ body, html{
 	min-height:500px;
 	background-image:url('../images/wall_back.png');
 	background-size:100% 100%;
+	z-index:49;
 }
 
 #slide > .ground{
@@ -113,9 +114,10 @@ body, html{
 #content{
 	position:relative;
 	width:100%;
+	min-width:1024px;
 	display:none;
 	margin-top:150px;
-	z-index:40;
+	z-index:49;
 }
 
 .box{
@@ -129,8 +131,6 @@ body, html{
 	margin:auto;
 }
 #box1{
-	background-image:url('../images/box2.png');
-	background-size:100% 100%;
 }
 #box2{
 	background-image:url('../images/box2.png');

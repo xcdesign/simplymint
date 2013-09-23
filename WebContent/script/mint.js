@@ -43,13 +43,27 @@ function zoomblur(){
 	
 }
 
+/*
 $(function(){
 	$("#up").bind("click",function(){
+		var height=document.getElementById('wall').clientHeight;
+		height=height+150;
+		$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
+		$("#slide").css("position","fixed");
+		$("#slide").css("top","150px");
+		$("#content").css("margin-top",height+"px");
+		$("#content").animate({"margin-top":"150px"},500);
+		
+	});
+});
+$(function(){
+	//changed part
+	$("#abc").bind("click",function(){
 		if($("#slide").css("display") == "none"){
 			$("#slide").css("background-image","");
 			$("#logo").css("position","absolute");
 			$("#nav").css("position","relative");
-			$("#content").css("margin-top","150px");
+			//$("#content").css("margin-top","150px");
 			$("#slide").slideDown(500,"easeOutBounce",function(){
 				backgroundSize();
 				$("#up").text("up");	
@@ -74,6 +88,7 @@ $(function(){
 	});
 }
 );
+*/
 
 $(function(){
 	$("#right")
@@ -112,7 +127,7 @@ function backgroundSize(){
 	$( "#slide" ).css( "height",height );
 }
 
-$(window).resize(function() {
+/*$(window).resize(function() {
 	backgroundSize();
 	if($( window ).width()<=650){
 	$("#slide").slideUp(500,"easeInBack",function(){
@@ -152,5 +167,63 @@ window.onload=function(){
 		});
 	}
 };
+*/
+
+window.onload=function(){
+	responsive();
+};
+
+$(window).resize(function() {
+	responsive();
+});
+
+
+function showSlide(){
+	$("#slide").css("background-image","");
+	$("#logo").css("position","absolute");
+	$("#nav").css("position","relative");
+	$("#slide").slideDown(500,"easeOutBounce",function(){
+		backgroundSize();
+		$("#up").text("up");	
+		$("#nav").css({"opacity":"1"});
+	});
+	//$("#content").hide();
+	$("#nav").css({"min-width":"1024px"});
+}
+
+function hideSlide(){
+	$("#logo").css("position","fixed");
+	$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
+	//hide readmore
+	$("#content").css({"margin-top":"150px","min-width":"0px"});
+	$("#content").show();
+	//change box1 background image 
+	//im_box1
+}
+
+function responsive(){
+	backgroundSize();
+	if($(window).width()<=650){
+		$("#slide").hide(function(){
+			hideSlide();
+		});
+	}
+	else{
+		if($(window).width()/$(window).height()<1.7){
+			if($("#slide").css("display") == "none"){
+				showSlide();
+			}
+			else{
+				$("#content").css({"margin-top":"0px","min-width":"1024px"});
+				$("#content").slideDown();
+			}
+		}
+		else{
+			$("#content").hide();
+			showSlide();
+		}
+	}
+}
+
 
 
