@@ -43,19 +43,24 @@ function zoomblur(){
 	
 }
 
-/*
+
 $(function(){
 	$("#up").bind("click",function(){
 		var height=document.getElementById('wall').clientHeight;
 		height=height+150;
 		$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
+		$("#logo").css("position","fixed");
 		$("#slide").css("position","fixed");
 		$("#slide").css("top","150px");
+		$("#content").show();
+		$("#readMore").hide();
 		$("#content").css("margin-top",height+"px");
-		$("#content").animate({"margin-top":"150px"},500);
+		$("#content").animate({"margin-top":"40px"},500);
 		
 	});
 });
+
+/*
 $(function(){
 	//changed part
 	$("#abc").bind("click",function(){
@@ -170,11 +175,29 @@ window.onload=function(){
 */
 
 window.onload=function(){
-	responsive();
+	backgroundSize();
+	if($(window).width()<=650){
+		$("#slide").hide(function(){
+			hideSlide();
+		});
+	}
+	else{
+			$("#content").css({"margin-top":"-6%","min-width":"1024px"});
+			if($(window).width()/$(window).height()<1.7){
+					$("#slide").css("position","relative");
+					$("#content").slideDown();
+					$("#readMore").hide();
+			}
+			else{
+					$("#content").hide();
+					showSlide();
+					$("#readMore").show();
+			}
+		}
 };
 
 $(window).resize(function() {
-	responsive();
+		responsive();
 });
 
 
@@ -195,7 +218,7 @@ function hideSlide(){
 	$("#logo").css("position","fixed");
 	$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
 	//hide readmore
-	$("#content").css({"margin-top":"150px","min-width":"0px"});
+	$("#content").css({"margin-top":"120px","min-width":"0px"});
 	$("#content").show();
 	//change box1 background image 
 	//im_box1
@@ -209,18 +232,28 @@ function responsive(){
 		});
 	}
 	else{
-		if($(window).width()/$(window).height()<1.7){
-			if($("#slide").css("display") == "none"){
-				showSlide();
+		if($("#slide").css("display")=="none" || $("#slide").css("position") != "fixed"){
+			$("#content").css({"margin-top":"-6%","min-width":"1024px"});
+			if($(window).width()/$(window).height()<1.7){
+				if($("#slide").css("display") == "none"){
+					$("#readMore").hide();
+					showSlide();
+				}
+				else{
+					$("#slide").css("position","relative");
+					if($("#content").css("display") == "none"){	
+						$("#content").slideDown();
+						$("#readMore").hide();
+					}
+				}
 			}
 			else{
-				$("#content").css({"margin-top":"0px","min-width":"1024px"});
-				$("#content").slideDown();
+				if($("#slide").css("position") != "fixed"){
+					$("#content").hide();
+					showSlide();
+					$("#readMore").show();
+				}
 			}
-		}
-		else{
-			$("#content").hide();
-			showSlide();
 		}
 	}
 }
