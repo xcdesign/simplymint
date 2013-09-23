@@ -55,7 +55,7 @@ $(function(){
 		$("#content").show();
 		$("#readMore").hide();
 		$("#content").css("margin-top",height+"px");
-		$("#content").animate({"margin-top":"40px"},500);
+		$("#content").animate({"margin-top":"130px"},500);
 		
 	});
 });
@@ -218,7 +218,7 @@ function hideSlide(){
 	$("#logo").css("position","fixed");
 	$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
 	//hide readmore
-	$("#content").css({"margin-top":"120px","min-width":"0px"});
+	$("#content").css({"margin-top":"150px","min-width":"0px"});
 	$("#content").show();
 	//change box1 background image 
 	//im_box1
@@ -270,6 +270,7 @@ $(window).scroll(function(){
 		$("#content").show();
 		$("#readMore").hide();
 		$("#content").css("margin-top",height+"px");
+		//alert(document.getElementById('nav').clientHeight);
 		$("#content").animate({"margin-top":"150px"},500);
 	}
 });
