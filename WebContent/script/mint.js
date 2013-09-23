@@ -4,12 +4,17 @@ $(function(){
 		height=height+150;
 		$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
 		$("#logo").css("position","fixed");
-		$("#slide").css("position","fixed");
-		$("#slide").css("top","150px");
-		$("#content").show();
+		
+		$("#slide")
+		.css("position","fixed")
+		.css("top","150px");
+		
 		$("#readMore").hide();
-		$("#content").css("margin-top",height+"px");
-		$("#content").animate({"margin-top":"130px"},500);
+		
+		$("#content")
+		.show()
+		.css("margin-top",height+"px")
+		.animate({"margin-top":"130px"},500);
 		
 	});
 });
@@ -43,32 +48,32 @@ $(function(){
 });
 
 function backgroundSize(){
-	//alert("here");
 	var img = document.getElementById('wall'); 
-	//or however you get a handle to the IMG
 	var height = img.clientHeight; 
-	//alert(height);
 	$( "#slide" ).css( "height",height );
 }
 
 window.onload=function(){
+	var slide = $("#slide");
+	var content=$("#content");
+	var readMore = $("#readMore");
 	backgroundSize();
 	if($(window).width()<=650){
-		$("#slide").hide(function(){
+		slide.hide(function(){
 			hideSlide();
 		});
 	}
 	else{
-			$("#content").css({"margin-top":"-6%","min-width":"1024px"});
+		content.css({"margin-top":"-6%","min-width":"1024px"});
 			if($(window).width()/$(window).height()<1.7){
-					$("#slide").css("position","relative");
-					$("#content").slideDown();
-					$("#readMore").hide();
+				slide.css("position","relative");
+				content.slideDown();
+				readMore.hide();
 			}
 			else{
-					$("#content").hide();
+				content.hide();
 					showSlide();
-					$("#readMore").show();
+					readMore.show();
 			}
 		}
 };
@@ -79,56 +84,61 @@ $(window).resize(function() {
 
 
 function showSlide(){
-	$("#slide").css("background-image","");
+	var nav = $("#nav");
 	$("#logo").css("position","absolute");
 	$("#nav").css("position","relative");
 	$("#slide").slideDown(500,"easeOutBounce",function(){
 		backgroundSize();
 		$("#up").text("up");	
-		$("#nav").css({"opacity":"1"});
+		nav.css({"opacity":"1"});
 	});
 	//$("#content").hide();
-	$("#nav").css({"min-width":"1024px"});
+	nav.css({"min-width":"1024px"});
 }
 
 function hideSlide(){
 	$("#logo").css("position","fixed");
 	$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
 	//hide readmore
-	$("#content").css({"margin-top":"150px","min-width":"0px"});
-	$("#content").show();
+	
+	$("#content")
+	.css({"margin-top":"150px","min-width":"0px"})
+	.show();
 	//change box1 background image 
 	//im_box1
 }
 
 function responsive(){
 	backgroundSize();
+	var slide = $("#slide");
+	var content=$("#content");
+	var readMore = $("#readMore");
 	if($(window).width()<=650){
 		$("#slide").hide(function(){
 			hideSlide();
 		});
 	}
 	else{
-		if($("#slide").css("display")=="none" || $("#slide").css("position") != "fixed"){
-			$("#content").css({"margin-top":"-6%","min-width":"1024px"});
+		if(slide.css("display")=="none" || slide.css("position") != "fixed"){
+			content.css({"margin-top":"-6%","min-width":"1024px"});
 			if($(window).width()/$(window).height()<1.7){
-				if($("#slide").css("display") == "none"){
-					$("#readMore").hide();
+				if(slide.css("display") == "none"){
+					readMore.hide();
 					showSlide();
 				}
 				else{
-					$("#slide").css("position","relative");
-					if($("#content").css("display") == "none"){	
-						$("#content").slideDown();
-						$("#readMore").hide();
+					slide.css("position","relative");
+					if(content.css("display") == "none"){	
+						content.slideDown();
+						readMore.hide();
 					}
 				}
 			}
 			else{
-				if($("#slide").css("position") != "fixed"){
-					$("#content").hide();
+				if(slide.css("position") != "fixed"){
+					content.hide();
 					showSlide();
-					$("#readMore").show();
+					readMore.show();
 				}
 			}
 		}
@@ -142,13 +152,14 @@ $(window).scroll(function(){
 		height=height+150;
 		$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
 		$("#logo").css("position","fixed");
-		$("#slide").css("position","fixed");
-		$("#slide").css("top","150px");
-		$("#content").show();
+		$("#slide")
+		.css("position","fixed")
+		.css("top","150px");
 		$("#readMore").hide();
-		$("#content").css("margin-top",height+"px");
-		//alert(document.getElementById('nav').clientHeight);
-		$("#content").animate({"margin-top":"150px"},500);
+		$("#content")
+		.show()
+		.css("margin-top",height+"px")
+		.animate({"margin-top":"150px"},500);
 	}
 });
 
