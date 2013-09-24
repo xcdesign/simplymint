@@ -131,6 +131,8 @@ body, html{
 	margin:auto;
 }
 #box1{
+	background-image:url('../images/menu.png');
+	background-size:100% 100%;
 }
 #box2{
 	background-image:url('../images/box2.png');
@@ -158,15 +160,6 @@ body, html{
 	width:30%;
 	padding:1% 1%;
 	height:auto;
-}
-
-#box3{
-	background:#bdc7af;
-	height:780px;
-}
-#box4{
-	background-image:url('../images/map.jpg');
-	height:780px;
 }
 
 #tuna {
