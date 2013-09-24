@@ -31,11 +31,14 @@
 		<img style="opacity:1;"src="images/logo.png"/>
 	</div>
 	<div id="nav">
-		<a id="up" style="width:100%;">up</a>
 	</div>
 	<div id="slide">
-		<img id="wall" class="ground" src="images/wall.png"/>
-		<img id="bar" class="ground" src="images/bar.png"/>
+		<img id="wall" class="ground back" src="images/wall.png"/>
+		<img id="bar" class="ground table" src="images/bar.png"/>
+		
+		<div id= "ice1" class="fridge table" onclick="showKey(1);"></div>
+		<div id ="ice2" class="fridge table" onclick="showKey(2);"></div>
+		
 		<img id="stool1" class="ground stool" src="images/stool.png"/>
 		<img id="stool2" class="ground stool" src="images/stool.png"/>
 		<!-- <img id="stool3" class="ground stool" src="images/stool.png"/>
@@ -45,8 +48,18 @@
 		<!-- <div id="tuna" class="ground"></div> -->
 		<!-- <img id="readMore" class="ground" src="images/readmore.png"/> -->
 		<div id="control">
-			<a id="left">left</a>
-			<a id="right">right</a>
+			<img id="left"src="images/left.png"/>
+			<img id="right"src="images/right.png"/>
+		</div>
+		<div id="flavors" class="back">
+			<h1>
+				<span id="key1" class="hide">web design</span>
+				<span id="key2" class="hide">reputation management</span>
+				<span id="key3" class="hide">web marketing Agency</span>
+				<span id="key4" class="hide">SEO Agency</span>
+				<span id="key5" class="hide">Pay Per Click</span>
+				<span id="key6" class="hide">Social Media Marketing</span>
+			</h1>
 		</div>
 		
 	</div>
@@ -54,11 +67,10 @@
 </div>
 <div id="content">
 	<div id="box1" class="box"> 
-		<!-- <div style="position:absolute;width:100%;height:auto;top:50px;">
-			<img style="width:35%;height:auto;margin:auto;"src="images/about_us.png"/>
-		</div>
-		 -->
 		<img id="im_box1" style="width:100%;height:auto;opacity:0;" src="images/box1_placeholder.png"/>
+		<div style="position:absolute;width:100%;height:3%;top:1%;opacity:0;">
+			<div id="fold_control"></div>
+		</div>
 	</div>
 	<div id="box2" class="box">
 		<div class="inner_box">

@@ -84,16 +84,57 @@ body, html{
 	left:76%;
 }
 
+.fridge{
+	position:absolute;
+	width:5%;
+	height:10%;
+	top:30%;
+}
+
+#ice1{
+	background:#000;
+	left:55%;"
+}
+
+#ice2{
+	background:#fff;
+	left:45%;"
+}
 
 #control{
 	position:absolute;
 	width:100%;
-	top:50%;
+	top:40%;
+	height:10%;
+	opacity:0.7;
 }
+#control:hover{
+	opacity:1;
+}
+
+#flavors{
+	position:absolute;
+	left:45%;
+	top:15%;
+	height:10%;
+}
+
+.hide{
+	display:none;
+}
+
+.hit{
+	display:inline;
+}
+
 #left{
+	height:100%;
+	width:auto;
 	float:left;
 }
 #right{
+	height:100%;
+	width:auto;
 	float:right;
 }
 #nav{
@@ -110,8 +151,16 @@ body, html{
 	position:relative;
 	width:100%;
 	min-width:1024px;
-	margin-top:-6%;
+	margin-top:-5%;
 	z-index:49;
+}
+
+#fold_control{
+	width:10%;
+	height:100%;
+	margin:auto;
+	background:#fff;
+	cursor:pointer;
 }
 
 .box{
