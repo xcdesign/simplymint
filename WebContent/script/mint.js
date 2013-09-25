@@ -1,9 +1,17 @@
+function gotospecial(num){
+	contentCover(0);
+	var height = $("#box"+num).offset().top-document.getElementById('wall').clientHeight;
+	//alert(height);
+	$('html, body').animate({
+		scrollTop: height,
+		}, 500);
+}
 function showKey(num){
 	var key = "key"+num;
 	$(".hide").css('display','none');
 	$("#"+key).fadeIn(500);//show("slide",{direction: 'left'},400);
 }
-function contentCover(){
+function contentCover(flag){
 	var height=document.getElementById('wall').clientHeight;
 	$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
 	$("#logo").css("position","fixed");
@@ -15,9 +23,11 @@ function contentCover(){
 	$("#content")
 	.css("margin-top",height+"px")
 	.animate({"margin-top":"150px"},500,'easeOutQuint',function(){
-		$('html, body').animate({
-			scrollTop: 0,
-			}, 500);
+		if($('html, body').scrollTop != 0 && flag ==1){
+			$('html, body').animate({
+				scrollTop: 0,
+				}, 500);
+		}
 	});
 	 
 }
@@ -46,6 +56,19 @@ $(function(){
 			}
 		}
 	});
+});
+
+$(function(){
+	
+		$("#fold_control")
+		.mouseenter(function(){
+			if($("#slide").css("position")!="fixed"){
+				$("#content").animate({top:"-=4%"},250,'easeOutBack',function(){
+					$("#content").animate({top:"+=4%"},250,'easeOutBounce');
+				});
+			}	
+		});
+	
 });
 
 $(function(){
@@ -155,12 +178,12 @@ $(window).scroll(function(){
 	        	 $("#box2").css({ "background-position": coords});
 	        }
 	        else if($('#box3').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box3').offset().top) / 10);
+	        	yPos = -(($window.scrollTop()-$('#box3').offset().top) / 5);
 	        	coords = '50% '+ yPos + 'px';
 	        	 $("#box3").css({ "background-position": coords});
 	        }
 	        else if($('#box4').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box4').offset().top) / 10);
+	        	yPos = -(($window.scrollTop()-$('#box4').offset().top) / 1);
 	        	coords = '50% '+ yPos + 'px';
 	        	 $("#box4").css({ "background-position": coords});
 	        }
@@ -168,7 +191,7 @@ $(window).scroll(function(){
     if($("#slide").css("display")!="none"){
     	var ratio = document.getElementById('wall').clientHeight/document.documentElement.scrollTop;
     	if(ratio<=2 && !flag){
-    		contentCover();
+    		contentCover(1);
     	}
     	else{
     		if(flag&&document.documentElement.scrollTop==0){

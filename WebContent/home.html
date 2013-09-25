@@ -10,22 +10,6 @@
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-<!--
-	<div style="position:relative;left:50%" id="control">
-	
-	<a onclick="zoomblur();">Zoom Blur</a>
-	<a onclick="blurzoom();">Blur Zoom</a>
-	<a onclick="slideup();">hide</a>
-	<a onclick="slidedown();">show</a>
-	  
-	
-</div>
-<div id="container" onclick="zoomblur();">
-	<img id="zoom" src="images/img3.jpg" />
- 	<img id="blur" class="large" src="images/img2.jpg" />
-   	<img id="large" class="large"src="images/img1.jpg" /> 
-</div>
--->
 <div id="header">
 	<div id="logo">
 		<img style="opacity:1;"src="images/logo.png"/>
@@ -36,8 +20,8 @@
 		<img id="wall" class="ground back" src="images/wall.png"/>
 		<img id="bar" class="ground table" src="images/bar.png"/>
 		
-		<div id= "ice1" class="fridge table ground" onmouseover="showKey(1);"></div>
-		<div id ="ice2" class="fridge table ground" onmouseover="showKey(2);"></div>
+		<div id= "ice1" class="fridge table ground" onmouseover="showKey(1);" onclick="gotospecial(2);"></div>
+		<div id ="ice2" class="fridge table ground" onmouseover="showKey(2);" onclick="gotospecial(3);"></div>
 		
 		<img id="stool1" class="ground stool" src="images/stool.png"/>
 		<img id="stool2" class="ground stool" src="images/stool.png"/>
@@ -53,12 +37,12 @@
 		</div>
 		<div id="flavors" class="back ground">
 			<h1>
-				<span id="key1" class="hide">web design</span>
-				<span id="key2" class="hide">reputation management</span>
-				<span id="key3" class="hide">web marketing Agency</span>
-				<span id="key4" class="hide">SEO Agency</span>
-				<span id="key5" class="hide">Pay Per Click</span>
-				<span id="key6" class="hide">Social Media Marketing</span>
+				<span id="key1" class="hide">WEB DESIGN</span>
+				<span id="key2" class="hide">REPUTATION MANAGEMENT</span>
+				<span id="key3" class="hide">WEB MARKETING AGENCY</span>
+				<span id="key4" class="hide">SEO AGENCY</span>
+				<span id="key5" class="hide">PAY PER CLICK</span>
+				<span id="key6" class="hide">SOCIAL MEDIA MARKETING</span>
 			</h1>
 		</div>
 		
@@ -68,7 +52,7 @@
 <div id="content">
 	<div id="box1" class="box"> 
 		<img id="im_box1" style="width:100%;height:auto;opacity:0;" src="images/box1_placeholder.png"/>
-		<div style="position:absolute;width:100%;height:3%;top:1%;opacity:0;">
+		<div style="position:absolute;width:100%;height:3%;top:0%;opacity:0;">
 			<div id="fold_control"></div>
 		</div>
 	</div>
