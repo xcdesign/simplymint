@@ -1,3 +1,4 @@
+
 function gotospecial(num){
 	contentCover(0);
 	var height = $("#box"+num).offset().top-document.getElementById('wall').clientHeight;
@@ -29,7 +30,9 @@ function contentCover(flag){
 				}, 500);
 		}
 	});
-	 
+	
+	$("#bell img").attr("src", "images/bellup.png");
+	$("#bell").css({"position":"fixed",top:"50%","text-align":"left"});
 }
 
 function contentUncover(){
@@ -42,17 +45,24 @@ function contentUncover(){
 
 	$("#content")
 	.css("margin-top",height+"px")
-	.animate({"margin-top":"-5%"},500,'easeOutBounce');
+	.animate({"margin-top":"0%"},500,'easeOutBounce');
+	
+	$('html, body').animate({
+		scrollTop: 0,
+		}, 500);
+	
+	$("#bell img").attr("src", "images/bell.png");
+	$("#bell").css({"position":"absolute",top:"-150px","text-align":"center"});
 }
 
 $(function(){
-	$("#fold_control").bind("click",function(){
+	$("#bell img").bind("click",function(){
 		if($(window).width()>=650){
 			if($("#slide").css("position")=="fixed"){
 				contentUncover();
 			}
 			else{
-				contentCover();
+				contentCover(1);
 			}
 		}
 	});
@@ -60,11 +70,11 @@ $(function(){
 
 $(function(){
 	
-		$("#fold_control")
+		$("#bell img")
 		.mouseenter(function(){
 			if($("#slide").css("position")!="fixed"){
-				$("#content").animate({top:"-=4%"},250,'easeOutBack',function(){
-					$("#content").animate({top:"+=4%"},250,'easeOutBounce');
+				$("#content").animate({top:"-=50px"},300,'easeOutBack',function(){
+					$("#content").animate({top:"+=50px"},300,'easeOutBounce');
 				});
 			}	
 		});
@@ -166,6 +176,8 @@ function responsive(){
 	}
 }
 
+var lastScrollTop = 0;
+
 $(window).scroll(function(){
 		
 		var flag = ($("#slide").css("position")=="fixed");
@@ -188,7 +200,10 @@ $(window).scroll(function(){
 	        	 $("#box4").css({ "background-position": coords});
 	        }
 		}
-    if($("#slide").css("display")!="none"){
+		
+		var st = $(this).scrollTop();
+		
+    if($("#slide").css("display")!="none" && (st>lastScrollTop)){
     	var ratio = document.getElementById('wall').clientHeight/document.documentElement.scrollTop;
     	if(ratio<=2 && !flag){
     		contentCover(1);
@@ -199,6 +214,6 @@ $(window).scroll(function(){
     		}
     	}
     }
-	
+    lastScrollTop = st;
 });
 

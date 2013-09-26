@@ -10,6 +10,11 @@
 }
 */
 
+* {
+    padding: 0px;
+    margin: 0px
+}
+
 @font-face {
     font-family: chalk;
     src: url('../stylesheet/chalkdust.ttf');
@@ -26,8 +31,8 @@ body, html{
 }
 #logo{
 	position:absolute;
-	top:50px;
-	left:5%;
+	top:5%;
+	left:50px;
 	z-index:51;
 }
 #logo img{
@@ -70,19 +75,31 @@ body, html{
 }
 
 #slide > .fridge{
-	width:5%;
+	left:40%;
+	width:22%;
 	height:10%;
 	bottom:60%;
+}
+
+.ice{
+	position:relative;
+	background:#000;
+	opacity:0.0;
+	width:15%;
+	height:100%;
+	display:inline-block;
+	cursor:pointer;
 }
 
 #slide > #flavors{
 	font-family: chalk;
 	color:#fff;
 	opacity:0.9; 
-	left:42%;
+	left:38%;
 	bottom:80%;
 	height:10%;
 }
+
 
 #slide > #stool1{
 	left:12%;
@@ -104,22 +121,13 @@ body, html{
 }
 
 
-#ice1{
-	background:#000;
-	left:55%;"
-}
-
-#ice2{
-	background:#fff;
-	left:45%;"
-}
-
 #control{
 	position:absolute;
 	width:100%;
 	top:40%;
 	height:10%;
 	opacity:0.7;
+	
 }
 #control:hover{
 	opacity:1;
@@ -158,79 +166,66 @@ body, html{
 	position:relative;
 	width:100%;
 	min-width:1024px;
-	margin-top:-5%;
 	z-index:49;
 }
 
-#fold_control{
-	width:10%;
-	height:100%;
-	margin:auto;
-	background:#fff;
+#bell{
+	position:absolute;
+	width:100%;
+	height:auto;
+	top:-150px;
 	cursor:pointer;
+	text-align:center;
 }
 
 .box{
 	width:100%;
 	height:auto;;	
 	text-align:center;
-	min-height:780px;
+	min-height:900px;
 }
 
-.inner_box{
-	max-width:1400px;
-	margin:auto;
-}
+
 #box1{
-	background-image:url('../images/menu.png');
-	background-size:100% 100%;
+	background:url('../images/sp1.jpg') 50% 0 repeat fixed;
+	background-size:cover;
 }
 #box2{
-	/*background-image:url('../images/box2.png');
-	background-size:100% 100%;*/
-	background:url('../images/sp1.jpg') 50% 0 repeat fixed;
-	
+	background:url('../images/sp2.jpg') 50% 0 repeat fixed;
+	background-size:cover;
 }
 
 #box3{
-	/*background-image:url('../images/box2.png');
-	background-size:100% 100%;*/
-	background:url('../images/sp2.jpg') 50% 0 repeat fixed;
-	
+	background:url('../images/sp3.jpg') 50% 0 repeat fixed;
+	background-size:cover;
 }
 
 #box4{
-	/*background-image:url('../images/box2.png');
-	background-size:100% 100%;
-	background-size:cover;*/
-	background:url('../images/sp3.jpg') 50% 0 repeat fixed;
-	
+	background:url('../images/sp4.jpg') 50% 0 repeat fixed;
+	background-size:cover;
 }
 
-/*#box2_left{
-	min-width:650px;
-	width:45%;
-	height:100%;
-	display:inline-block;
+#box5{
+	background:url('../images/sp5.jpg') 50% 0 repeat fixed;
+	background-size:cover;
 }
-#box2_left img{
-	width:100%;
-	height:auto;
+
+#box6{
+	background:url('../images/sp6.jpg') 50% 0 repeat fixed;
+	background-size:cover;
 }
-#box2_right{
-	min-width:450px;
-	width:50%;
-	height:auto;
-	display:inline-block;
-	margin:100px 0px;
+#box7{
+	background:url('../images/sp7.jpg') 50% 0 repeat fixed;
+	background-size:cover;
 }
-#box2_right img{
-	min-width:200px;
-	width:30%;
-	padding:1% 1%;
-	height:auto;
+#box8{
+	background:url('../images/sp8.jpg') 50% 0 repeat fixed;
+	background-size:cover;
 }
-*/
+#box9{
+	background:url('../images/sp9.jpg') 50% 0 repeat fixed;
+	background-size:cover;
+}
 
 #tuna {
   /* steps causes the animation to chunk into 12 equal pieces */
