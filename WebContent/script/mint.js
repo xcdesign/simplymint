@@ -1,3 +1,34 @@
+/*$(function() {
+	$('#logo').animate({top:"30px",left:"50px"},500);
+	$('#logo img').animate({width:'400px'},450,function(){
+		$('#content').css('opacity','1');
+		$('#slide').animate({'opacity':'1'},500);
+	});
+});*/
+function backgroundSize(){
+	var img = document.getElementById('wall'); 
+	var height = img.clientHeight; 
+	$( "#slide" ).css( "height",height );
+}
+    
+window.onload=function(){
+	var slide = $("#slide");
+	backgroundSize();
+	if($(window).width()<=800){
+		slide.hide(function(){
+			hideSlide();
+		});
+	}
+	$('#logo').animate({top:"30px",left:"50px"},500);
+	$('#logo img').animate({width:'400px'},500,function(){
+		$('#slide').animate({'opacity':'1'},500,function(){
+			
+		});
+		$('#content').animate({'opacity':'1'},500,function(){
+			
+		});
+	});
+};
 
 function gotospecial(num){
 	contentCover(0);
@@ -57,7 +88,7 @@ function contentUncover(){
 
 $(function(){
 	$("#bell img").bind("click",function(){
-		if($(window).width()>=650){
+		if($(window).width()>=800){
 			if($("#slide").css("position")=="fixed"){
 				contentUncover();
 			}
@@ -109,23 +140,6 @@ $(function(){
 	});
 });
 
-function backgroundSize(){
-	var img = document.getElementById('wall'); 
-	var height = img.clientHeight; 
-	$( "#slide" ).css( "height",height );
-}
-
-window.onload=function(){
-	var slide = $("#slide");
-	backgroundSize();
-	if($(window).width()<=650){
-		slide.hide(function(){
-			hideSlide();
-		});
-	}
-};
-
-
 $(window).resize(function(){
 	responsive();
 	/*
@@ -141,10 +155,11 @@ function showSlide(){
 	var nav = $("#nav");
 	$("#logo").css("position","absolute");
 	$("#nav").css("position","relative");
-	$("#content").css({"margin-top":"-5%","min-width":"1024px"});
+	$("#content").css({"min-width":"1024px","margin-top":"0px"});
+	$("#bell img").attr("src", "images/bell.png");
+	$("#bell").css({"position":"absolute",top:"-150px","text-align":"center","margin-top":"0px"});
 	$("#slide").slideDown(500,"easeOutBounce",function(){
 		backgroundSize();
-		$("#up").text("up");	
 	});
 
 	nav.css({"min-width":"1024px"});
@@ -154,6 +169,7 @@ function hideSlide(){
 	$("#logo").css("position","fixed");
 	$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
 	$("#content").css({"margin-top":"150px","min-width":"0px"});
+	$("#bell").css({"position":"absolute",top:"-150px","text-align":"center","margin-top":"0px"});
 	//change box1 background image 
 	//im_box1
 }
@@ -161,7 +177,7 @@ function hideSlide(){
 function responsive(){
 	backgroundSize();
 	var slide = $("#slide");
-	if($(window).width()<=650){
+	if($(window).width()<=800){
 		//go to mobile view
 		$("#slide").hide(function(){
 			hideSlide();
