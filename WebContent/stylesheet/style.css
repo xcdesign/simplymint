@@ -47,8 +47,8 @@ body, html{
 	position:relative;
 	width:100%;
 	height:auto;
-	min-width:1024px;
-	min-height:500px;
+	min-width:1200px;
+	
 	background-image:url('../images/wall_back.png');
 	background-size:100% 100%;
 	z-index:49;
@@ -97,9 +97,10 @@ body, html{
 
 #slide > #flavors{
 	font-family: chalk;
+	font-size:12px;
 	color:#fff;
-	opacity:0.9; 
-	left:38%;
+	opacity:0.7; 
+	left:44%;
 	bottom:80%;
 	height:10%;
 }
@@ -169,7 +170,7 @@ body, html{
 #content{
 	position:relative;
 	width:100%;
-	min-width:1024px;
+	min-width:1200px;
 	z-index:49;
 	height:auto;
 	background:#000;
@@ -189,17 +190,18 @@ body, html{
 	width:100%;
 	height:auto;;	
 	text-align:center;
+	min-height:720px;
 }
 
 .innerBox{
 	max-width:1400px;
-	width:90%;
+	width:80%;
 	height:auto;
 	margin:auto;
 }
 
 .banner{
-	width:80%;
+	width:50%;
 	height:auto;
 	margin-top:5%;
 }
@@ -211,43 +213,43 @@ body, html{
 }
 
 #box1{
-	background:url('../images/sample_bg_1.png') 50% 0 repeat fixed;
+	background:url('../images/sp1.jpg') 50% 0 repeat fixed;
 	background-size:cover;
 }
 #box2{
-	background:url('../images/sample_bg_2.png') 50% 0 repeat fixed;
+	background:url('../images/sp2.jpg') 50% 0 repeat fixed;
 	background-size:cover;
 }
 
 #box3{
-	background:url('../images/sample_bg_1.png') 50% 0 repeat fixed;
+	background:url('../images/sp3.jpg') 50% 0 repeat fixed;
 	background-size:cover;
 }
 
 #box4{
-	background:url('../images/sample_bg_2.png') 50% 0 repeat fixed;
+	background:url('../images/sp4.jpg') 50% 0 repeat fixed;
 	background-size:cover;
 }
 
 #box5{
-	background:url('../images/sample_bg_1.png') 50% 0 repeat fixed;
+	background:url('../images/sp5.jpg') 50% 0 repeat fixed;
 	background-size:cover;
 }
 
 #box6{
-	background:url('../images/sample_bg_2.png') 50% 0 repeat fixed;
+	background:url('../images/sp6.jpg') 50% 0 repeat fixed;
 	background-size:cover;
 }
 #box7{
-	background:url('../images/sample_bg_1.png') 50% 0 repeat fixed;
+	background:url('../images/sp7.jpg') 50% 0 repeat fixed;
 	background-size:cover;
 }
 #box8{
-	background:url('../images/sample_bg_2.png') 50% 0 repeat fixed;
+	background:url('../images/sp8.jpg') 50% 0 repeat fixed;
 	background-size:cover;
 }
 #box9{
-	background:url('../images/sample_bg_1.png') 50% 0 repeat fixed;
+	background:url('../images/sp9.jpg') 50% 0 repeat fixed;
 	background-size:cover;
 }
 

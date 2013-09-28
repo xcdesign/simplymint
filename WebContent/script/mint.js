@@ -5,6 +5,10 @@
 		$('#slide').animate({'opacity':'1'},500);
 	});
 });*/
+
+function changeFont(width){
+
+}
 function backgroundSize(){
 	var img = document.getElementById('wall'); 
 	var height = img.clientHeight; 
@@ -198,6 +202,7 @@ $(window).scroll(function(){
 		
 		var flag = ($("#slide").css("position")=="fixed");
 		if(flag){
+			//alert($("#slide").css("position"));
 			var yPos = 0;
 	        var coords ='';
 	        if($('#box1').offset().top==0){
@@ -250,7 +255,9 @@ $(window).scroll(function(){
 		var st = $(this).scrollTop();
 		
     if($("#slide").css("display")!="none" && (st>lastScrollTop)){
-    	var ratio = document.getElementById('wall').clientHeight/document.documentElement.scrollTop;
+    	
+    	var ratio = document.getElementById('wall').clientHeight/$(window).scrollTop();
+    	//alert(ratio);
     	if(ratio<=2 && !flag){
     		contentCover(1);
     	}
