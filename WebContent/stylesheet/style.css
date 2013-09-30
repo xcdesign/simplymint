@@ -283,17 +283,14 @@ h1{
 	background-size:cover;
 }
 #box7{
-	background:url('../images/sp4.png') 50% 0 repeat fixed;
-	background-size:cover;
-}
-#box8{
 	background:url('../images/sp5.png') 50% 0 repeat fixed;
 	background-size:cover;
 }
-#box9{
-	background:url('../images/service_bg.png') 50% 0 repeat fixed;
+#box8{
+	background:url('../images/pa_bg.png') 50% 0 repeat fixed;
 	background-size:cover;
 }
+
 
 #tuna {
   /* steps causes the animation to chunk into 12 equal pieces */
@@ -317,13 +314,12 @@ h1{
     }
 }
 
-.box #video_background {
+#video_background {
 position:absolute;
 top:0px;
 right: 0px;
-min-width:100%;
-min-height:100%;
-height: auto;
+width:100%;
+height:auto;
 z-index:-1;
 overflow: hidden;
 opacity:0.5;
