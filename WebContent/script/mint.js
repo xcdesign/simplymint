@@ -6,9 +6,6 @@
 	});
 });*/
 
-function changeFont(width){
-
-}
 function backgroundSize(){
 	var img = document.getElementById('wall'); 
 	var height = img.clientHeight; 
@@ -16,6 +13,7 @@ function backgroundSize(){
 }
     
 window.onload=function(){
+	//alert('here');
 	var slide = $("#slide");
 	backgroundSize();
 	if($(window).width()<=800){
@@ -23,12 +21,8 @@ window.onload=function(){
 			hideSlide();
 		});
 	}
-	$('#logo').animate({top:"30px",left:"50px"},500);
-	$('#logo img').animate({width:'400px'},500,function(){
-		$('#slide').animate({'opacity':'1'},500,function(){
-			
-		});
-		$('#content').animate({'opacity':'1'},500,function(){
+	$('#logo').animate({top:"30px",left:"50px",width:'400px'},500,function(){
+		$('#wrapper').animate({'opacity':'1'},500,function(){
 			
 		});
 	});
@@ -159,7 +153,8 @@ function showSlide(){
 	var nav = $("#nav");
 	$("#logo").css("position","absolute");
 	$("#nav").css("position","relative");
-	$("#content").css({"min-width":"1024px","margin-top":"0px"});
+	$("#content").css({"min-width":"1200px","margin-top":"0px"});
+	$(".box").css({"min-width":"1200px"});
 	$("#bell img").attr("src", "images/bell.png");
 	$("#bell").css({"position":"absolute",top:"-150px","text-align":"center","margin-top":"0px"});
 	$("#slide").slideDown(500,"easeOutBounce",function(){
@@ -173,6 +168,7 @@ function hideSlide(){
 	$("#logo").css("position","fixed");
 	$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
 	$("#content").css({"margin-top":"150px","min-width":"0px"});
+	$(".box").css({"min-width":"0px"});
 	$("#bell").css({"position":"absolute",top:"-150px","text-align":"center","margin-top":"0px"});
 	//change box1 background image 
 	//im_box1
@@ -190,6 +186,8 @@ function responsive(){
 	else{
 			if(slide.css('display')=='none'){
 				//from mobile view
+				$('#nav').css('min-width','1200px');
+				$('#content').css('min-width','1200px');
 				slide.css({'position':'relative','top':'0px'});
 				showSlide();
 			}
@@ -205,50 +203,40 @@ $(window).scroll(function(){
 			//alert($("#slide").css("position"));
 			var yPos = 0;
 	        var coords ='';
-	        if($('#box1').offset().top==0){
+	        if($('#box2').offset().top==0){
 	        	yPos = -(($window.scrollTop()-$('#box2').offset().top) / 10);
-	        	coords = '50% '+ yPos + 'px';
-	        	 $("#box1").css({ "background-position": coords});
-	        }
-	        else if($('#box2').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box3').offset().top) / 10);
 	        	coords = '50% '+ yPos + 'px';
 	        	 $("#box2").css({ "background-position": coords});
 	        }
 	        else if($('#box3').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box4').offset().top) / 10);
+	        	yPos = -(($window.scrollTop()-$('#box3').offset().top) / 10);
 	        	coords = '50% '+ yPos + 'px';
 	        	 $("#box3").css({ "background-position": coords});
 	        }
 	        else if($('#box4').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box3').offset().top) / 10);
+	        	yPos = -(($window.scrollTop()-$('#box4').offset().top) / 10);
 	        	coords = '50% '+ yPos + 'px';
 	        	 $("#box4").css({ "background-position": coords});
 	        }
 	        else if($('#box5').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box4').offset().top) / 10);
+	        	yPos = -(($window.scrollTop()-$('#box5').offset().top) / 10);
 	        	coords = '50% '+ yPos + 'px';
 	        	 $("#box5").css({ "background-position": coords});
 	        }
 	        else if($('#box6').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box3').offset().top) / 10);
+	        	yPos = -(($window.scrollTop()-$('#box6').offset().top) / 10);
 	        	coords = '50% '+ yPos + 'px';
 	        	 $("#box6").css({ "background-position": coords});
 	        }
 	        else if($('#box7').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box4').offset().top) / 10);
+	        	yPos = -(($window.scrollTop()-$('#box7').offset().top) / 10);
 	        	coords = '50% '+ yPos + 'px';
 	        	 $("#box7").css({ "background-position": coords});
 	        }
 	        else if($('#box8').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box3').offset().top) / 10);
+	        	yPos = -(($window.scrollTop()-$('#box8').offset().top) / 10);
 	        	coords = '50% '+ yPos + 'px';
 	        	 $("#box8").css({ "background-position": coords});
-	        }
-	        else if($('#box9').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box4').offset().top) / 10);
-	        	coords = '50% '+ yPos + 'px';
-	        	 $("#box9").css({ "background-position": coords});
 	        }
 		}
 		
