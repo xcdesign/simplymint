@@ -19,7 +19,14 @@
 	$('#logo').css({top:'40%',left:'15%',width:'70%'});
 </script>
 <div id="header">
-	<div id="nav">
+	<div id="nav" >
+		<div style="position:absolute;top:60px;width:700px;right:0px;height:50px;">
+			<a href=# class="link">Home</a>
+			<a href=# class="link">What We Do</a>
+			<a href=# class="link">Portfolio</a>
+			<a href=# class="link">Contact</a>
+			<a href=# class="link">Blog</a>
+		</div>
 	</div>
 	<div id="slide">
 		<img id="wall" class="ground back" src="images/wall.png"/>
@@ -63,20 +70,15 @@
 		<img style="width:150px;height:auto;margin:auto;"src="images/bell.png"/>
 	</div>
 	<div id="box2" class="box"> 
-	<!-- <video id="video_background" preload="auto" autoplay loop muted="muted" volume="0"> 
-		<source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm">
-		<source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
-		Video not supported
-		</video>  -->
-			<img class="banner" src="images/service.png">
+			<img class="banner" style="z-index:10;"src="images/service.png">
 			<p class="text">
 			SimplyMint is a New York City based Website Design and Marketing Agency. 
 			With over 15 years of collective experience in successfully launching, 
 			developing and marketing brands our team is comprised of experts in their respective fields.  
 			With every strategy we creatively design our team maintains your objectives, timelines and budget at the forefront. 
 			</p>
-			<img class="banner" src="images/team.png">
-		<div class="innerBox" style="padding:5% 0;">
+			<img class="banner" style="z-index:10;" src="images/team.png">
+		<div class="innerBox" style="padding:5% 0;z-index:10;">
 			<div class="team">
 				<span class="overlay"><p>Name&title</p></span>
 				<img src="images/head.png"> 
@@ -114,6 +116,10 @@
 				<img src="images/head.png"> 
 			</div>
 		</div>
+		<video id="video_background" preload="auto" autoplay loop muted="muted" volume="0"> 
+		<source src="http://ak4.picdn.net/shutterstock/videos/2440799/preview/stock-footage-movie-film-vintage-design-old-trailer.mp4" type="video/mp4"></source>
+		<source src="http://ak4.picdn.net/shutterstock/videos/2440799/preview/stock-footage-movie-film-vintage-design-old-trailer.webm" type="video/webm"></source>
+		</video>
 	</div>
 	<div id="box3" class="box">
 		<div class="innerBox">

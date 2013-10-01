@@ -61,7 +61,7 @@ function contentCover(flag){
 	});
 	
 	$("#bell img").attr("src", "images/bellup.png");
-	$("#bell").css({"position":"fixed",top:"50%","text-align":"left"});
+	$("#bell").css({"position":"fixed",top:"50%",left:"50px","text-align":"left"});
 }
 
 function contentUncover(){
@@ -81,7 +81,7 @@ function contentUncover(){
 		}, 500);
 	
 	$("#bell img").attr("src", "images/bell.png");
-	$("#bell").css({"position":"absolute",top:"-150px","text-align":"center"});
+	$("#bell").css({"position":"absolute",top:"-150px","text-align":"center",left:"0px"});
 }
 
 $(function(){
@@ -153,23 +153,25 @@ function showSlide(){
 	var nav = $("#nav");
 	$("#logo").css("position","absolute");
 	$("#nav").css("position","relative");
+	$("#links").css({width:"700px",top:"60px","position":"absolute",right:"50px"});
 	$("#content").css({"min-width":"1200px","margin-top":"0px"});
 	$(".box").css({"min-width":"1200px"});
 	$("#bell img").attr("src", "images/bell.png");
-	$("#bell").css({"position":"absolute",top:"-150px","text-align":"center","margin-top":"0px"});
+	$("#bell").css({"position":"absolute",top:"-150px","text-align":"center","margin-top":"0px",left:"0px"});
 	$("#slide").slideDown(500,"easeOutBounce",function(){
 		backgroundSize();
 	});
 
-	nav.css({"min-width":"1024px"});
+	nav.css({"min-width":"1200px"});
 }
 
 function hideSlide(){
 	$("#logo").css("position","fixed");
 	$("#nav").css({"position":"fixed",top:"0%",right:"0%"});
+	$("#links").css({width:"100%",top:"110px","position":"fixed",right:"0px","text-align":"center"});
 	$("#content").css({"margin-top":"150px","min-width":"0px"});
 	$(".box").css({"min-width":"0px"});
-	$("#bell").css({"position":"absolute",top:"-150px","text-align":"center","margin-top":"0px"});
+	$("#bell").css({"position":"absolute",top:"-150px","text-align":"center","margin-top":"0px",left:"50px"});
 	//change box1 background image 
 	//im_box1
 }
