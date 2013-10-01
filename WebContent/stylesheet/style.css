@@ -29,6 +29,7 @@ body, html{
 	width:100%;
 	height:100%;
 	background:#000;
+	min-width:600px;
 }
 #header{
 	width:100%;
@@ -37,7 +38,7 @@ body, html{
 #logo{
 	position:absolute;
 	top:30px;
-	left:50px;
+	left:6%;
 	z-index:51;
 	width:400px;
 }
@@ -49,8 +50,10 @@ body, html{
 
 .link{
 	display:inline-block;
-	font-size:22px;
-	margin-right:15px;
+	font-family: 'Ubuntu',sans-serif;
+	font-weight: 300; 
+	font-size:21px;
+	margin-right:2%;
 	height:70%;
 	text-decoration: none;
 	color:#fff;
@@ -91,14 +94,15 @@ body, html{
 	left:6%;
 	width:88%;
 	height:auto;
-	bottom:6%;
+	bottom:8%;
 }
 
 #slide > .fridge{
 	left:40%;
 	width:22%;
 	height:10%;
-	bottom:60%;
+	bottom:52%;
+	z-index:100;
 }
 
 .ice{
@@ -279,29 +283,35 @@ h1{
 #box3{
 	background:url('../images/sp1.png') 40% 0 repeat fixed;
 	background-size:cover;
+	padding-bottom:5%
 }
 
 #box4{
 	background:url('../images/sp6.png') 50% 0 repeat fixed;
 	background-size:cover;
+	padding-bottom:5%
 }
 
 #box5{
 	background:url('../images/sp3.png') 50% 0 repeat fixed;
 	background-size:cover;
+	padding-bottom:5%
 }
 
 #box6{
 	background:url('../images/sp2.png') 50% 0 repeat fixed;
 	background-size:cover;
+	padding-bottom:5%
 }
 #box7{
 	background:url('../images/sp5.png') 50% 0 repeat fixed;
 	background-size:cover;
+	padding-bottom:5%
 }
 #box8{
 	background:url('../images/pa_bg.png') 50% 0 repeat fixed;
 	background-size:cover;
+	padding-bottom:5%
 }
 
 
@@ -325,7 +335,33 @@ h1{
    h1{
         font-size:18px ; /* Base font-size of 32px */
     }
+     .text{
+        font-size:20px ; /* Base font-size of 32px */
+    }
 }
+
+@media screen and (max-width: 800px) {
+   .link{
+        font-size:18px ; /* Base font-size of 32px */
+    }
+    .text{
+    	min-width:250px;
+        font-size:12px ; /* Base font-size of 32px */
+    }
+    #nav{
+    	min-width:0px;
+    }
+    
+}
+
+@media screen and (min-width: 2000px) {
+	.text{
+        font-size:34px ; /* Base font-size of 32px */
+    }
+}
+
+
+
 
 #video_background {
 position:absolute;

@@ -7,6 +7,7 @@
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
 <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script type="text/javascript" src="script/mint.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -20,7 +21,7 @@
 </script>
 <div id="header">
 	<div id="nav" >
-		<div style="position:absolute;top:60px;width:700px;right:0px;height:50px;">
+		<div id="links" style="position:absolute;top:65px;width:40%;right:0px;height:50px;">
 			<a href=# class="link">Home</a>
 			<a href=# class="link">What We Do</a>
 			<a href=# class="link">Portfolio</a>
@@ -44,8 +45,8 @@
 		
 		<div class="fridge table ground">
 			<div  class="ice" onmouseover="showKey(1);" onclick="gotospecial(3);"></div>
-			<div  class="ice" onmouseover="showKey(2);" onclick="gotospecial(4);"></div>
-			<div  class="ice" onmouseover="showKey(3);" onclick="gotospecial(5);"></div>
+			<div  class="ice" onmouseover="showKey(2);" onclick="gotospecial(5);"></div>
+			<div  class="ice" onmouseover="showKey(3);" onclick="gotospecial(4);"></div>
 			<div  class="ice" onmouseover="showKey(4);" onclick="gotospecial(6);"></div>
 			<div  class="ice" onmouseover="showKey(5);" onclick="gotospecial(7);"></div>
 			<div  class="ice" onmouseover="showKey(6);" onclick="gotospecial(8);"></div>
@@ -72,11 +73,16 @@
 	<div id="box2" class="box"> 
 			<img src="images/pattern2.png" style="position:relative;width:100%;height:auto;opacity:0;">
 			<img style="position:absolute;width:50%;height:auto;margin-top:5%;z-index:100;left:25%;top:0px;"src="images/service.png">
-			<p class="text" style="position:absolute;z-index:100;top:50%;left:25%;">
-			SimplyMint is a New York City based Website Design and Marketing Agency. 
-			With over 15 years of collective experience in successfully launching, 
-			developing and marketing brands our team is comprised of experts in their respective fields.  
-			With every strategy we creatively design our team maintains your objectives, timelines and budget at the forefront. 
+			<p class="text" style="position:absolute;z-index:100;top:40%;left:25%;">
+			Welcome to SimplyMint, your digital branding parlor.
+			At SimplyMint we are innovators in the digital sphere. 
+			We pioneer creative strategies and develop effective solutions to create seamless and engaging online experiences. 
+			Through a detailed understanding of your business model, assessment of strategy, and competitive analysis,
+			 we discover your brand’s unique flavor and cultivate your story to create an honest and evocative narrative across 
+			 your website and social pages. We identify your audience and create relevant, 
+			 highly visible campaigns catered to their specific tastes using SEO, SEM, Social Media Marketing, 
+			 and other online marketing techniques. We invite you to step into our parlor, explore our services, 
+			 and discover what SimplyMint can do for you.
 			</p>
 			<video id="video_background" preload="auto" autoplay loop muted="muted" volume="0"> 
 			<source src="http://ak4.picdn.net/shutterstock/videos/2440799/preview/stock-footage-movie-film-vintage-design-old-trailer.mp4" type="video/mp4"></source>
@@ -86,39 +92,85 @@
 	<div id="box3" class="box">
 		<div class="innerBox">
 			<img class="banner" src="images/sp_wd.png">
-			<div class="text">
+			<div class="text" style="color:#fff;width:60%;">
+			Your website is the epicenter of your digital presence and the face of your brand. 
+			At SimplyMint, we analyze your target audience’s activity and reaction then integrate our findings into our content and design, 
+			creating visually stunning websites that reflect the personality of your company, 
+			create a connection with the audience, and provide a unique digital experience—all white focusing on encouraging viewer action, 
+			such as submitting a form or making a purchase. Merging vivid photography, exquisite design, 
+			and brilliant copy with seamless user experience, intuitive navigation, and multi-device functionality, 
+			SimplyMint designed websites tell your story and sell your products.
 			</div>
 		</div>
 	</div>
 	<div id="box4" class="box">
 		<div class="innerBox">
 			<img class="banner" src="images/sp_om.png">
+			<div class="text" style="color:#fff;width:60%;">
+			Combining detailed consumer analytics with a visionary brand narrative, 
+			SimplyMint will find and target your customers, creating individual online marketing strategies that include Social Media, 
+			SEO, Email Marketing, Paid Advertising, and Mobile Marketing.
+			</div>
 			
-			<div class="text"></div>
+			
 		</div>
 	</div>
 	<div id="box5" class="box">
 		<div class="innerBox">
 			<img class="banner" src="images/sp_db.png">
-			<div class="text"></div>
+			<div class="text" style="color:#CDD6C2;width:60%;">
+			Your brand is the personality of your business. 
+			It is the emotional and psychological relationship you have with your customers. 
+			It’s your story. At SimplyMint, we are master storytellers. 
+			We get to the core of your business and discover what makes you unique and exciting, 
+			and then we spotlight these truths in your branding campaign.
+			From there, we develop a creative strategy to present an honest, personal, and vibrant narrative to your audience.
+			Combining striking visual elements with relevant, engaging content, 
+			SimplyMint will take your story from a concept to a reality, 
+			creating a unique and cohesive brand identity across all of your digital channels.
+			</div>
 		</div>
 	</div>
 	<div id="box6" class="box">
 		<div class="innerBox">
 			<img class="banner" src="images/sp_seo.png">
-			<div class="text"></div>
+			<div class="text" style="color:#000;width:60%;">
+			A great story deserves an audience. 
+			Our unique approach to SEO uses a combination of proprietary technologies and 
+			analytical tools to ensure that your sites are prominently ranked and highly visible. 
+			Our Search Engine Optimization services are custom tailored to your brand, allowing for fine tuning based on
+			behaviors and search patterns that uncover targeting opportunities at the consumer level. 
+			Our leveraged technologies will give you an advantage over relevant critical keywords on all devices and platforms,
+			 making sure that your story is heard.
+			</div>
 		</div>
 	</div>
 	<div id="box7" class="box">
 		<div class="innerBox">
 			<img class="banner" src="images/sp_sm.png">
-			<div class="text"></div>
+			<div class="text" style="color:#fff;width:60%;">
+			Social Media is a conversation. 
+			At SimplyMint, we create shareable content, 
+			providing your audience with a deeper insight into your story and 
+			encouraging them to take an active role in telling that story by sharing with their friends.
+			 We gauge your client’s behaviors and responses to the tone of your brand personality and develop targeted campaigns 
+			 that focus on strengthening your relationships with your followers and widening your brand reach. 
+			 As your brand evolves on Social Media, so do our strategies. 
+			 Our custom tools provide detailed reports analyzing the effectiveness of your campaign, 
+			 allowing us to refine and improve our techniques to maximize consumer engagement.
+			</div>
 		</div>
 	</div>
 	<div id="box8" class="box">
 		<div class="innerBox">
 			<img class="banner" src="images/sp_pa.png">
-			<div class="text"></div>
+			<div class="text" style="color:#000;width:60%;">
+			Search Engine Marketing focuses your attention on real customers so that you’re there when they need you. 
+			After generating detailed analytical behavior reports, 
+			SimplyMint develops efficient cross-channel paid advertising campaigns that are tightly targeted to an interested 
+			and motivated audience. Utilizing mobile and social media, 
+			we create highly specialized SEM and broadcast your brand to the people who care the most.
+			</div>
 		</div>
 	</div>
 </div>
