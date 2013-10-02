@@ -205,44 +205,26 @@ $(window).scroll(function(){
 		
 		var flag = ($("#slide").css("position")=="fixed");
 		if(flag){
-			//alert($("#slide").css("position"));
 			var yPos = 0;
 	        var coords ='';
-	        if($('#box2').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box2').offset().top) / 10);
-	        	coords = '50% '+ yPos + 'px';
-	        	 $("#box2").css({ "background-position": coords});
-	        }
-	        else if($('#box3').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box3').offset().top) / 10);
-	        	coords = '50% '+ yPos + 'px';
-	        	 $("#box3").css({ "background-position": coords});
-	        }
-	        else if($('#box4').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box4').offset().top) / 10);
-	        	coords = '50% '+ yPos + 'px';
-	        	 $("#box4").css({ "background-position": coords});
-	        }
-	        else if($('#box5').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box5').offset().top) / 10);
-	        	coords = '50% '+ yPos + 'px';
-	        	 $("#box5").css({ "background-position": coords});
-	        }
-	        else if($('#box6').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box6').offset().top) / 10);
-	        	coords = '50% '+ yPos + 'px';
-	        	 $("#box6").css({ "background-position": coords});
-	        }
-	        else if($('#box7').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box7').offset().top) / 10);
-	        	coords = '50% '+ yPos + 'px';
-	        	 $("#box7").css({ "background-position": coords});
-	        }
-	        else if($('#box8').offset().top==0){
-	        	yPos = -(($window.scrollTop()-$('#box8').offset().top) / 10);
+	        	yPos = -(($(window).scrollTop()-$('#box8').offset().top) / 7);
 	        	coords = '50% '+ yPos + 'px';
 	        	 $("#box8").css({ "background-position": coords});
-	        }
+	        	yPos = -(($(window).scrollTop()-$('#box7').offset().top) / 7);
+	        	coords = '50% '+ yPos + 'px';
+	        	 $("#box7").css({ "background-position": coords});
+	        	yPos = -(($(window).scrollTop()-$('#box6').offset().top) / 7);
+	        	coords = '50% '+ yPos + 'px';
+	        	 $("#box6").css({ "background-position": coords});
+	        	yPos = -(($(window).scrollTop()-$('#box5').offset().top) / 7);
+	        	coords = '50% '+ yPos + 'px';
+	        	 $("#box5").css({ "background-position": coords});
+	        	yPos = -(($(window).scrollTop()-$('#box4').offset().top) / 7);
+	        	coords = '50% '+ yPos + 'px';
+	        	 $("#box4").css({ "background-position": coords});
+	        	yPos = -(($(window).scrollTop()-$('#box3').offset().top) / 7);
+	        	coords = '50% '+ yPos + 'px';
+	        	 $("#box3").css({ "background-position": coords});
 		}
 		
 		var st = $(this).scrollTop();

@@ -174,11 +174,13 @@ h1{
 	height:100%;
 	width:auto;
 	float:left;
+	padding-left:1%;
 }
 #right{
 	height:100%;
 	width:auto;
 	float:right;
+	padding-right:1%;
 }
 #nav{
 	position:relative;
@@ -281,37 +283,37 @@ h1{
 }
 
 #box3{
-	background:url('../images/sp1.png') 40% 0 repeat fixed;
+	background:url('../images/sp1.png') 50% 0 repeat fixed;
 	background-size:cover;
-	padding-bottom:5%
+	padding-bottom:5%;
 }
 
 #box4{
 	background:url('../images/sp6.png') 50% 0 repeat fixed;
 	background-size:cover;
-	padding-bottom:5%
+	padding-bottom:5%;
 }
 
 #box5{
 	background:url('../images/sp3.png') 50% 0 repeat fixed;
 	background-size:cover;
-	padding-bottom:5%
+	padding-bottom:5%;
 }
 
 #box6{
 	background:url('../images/sp2.png') 50% 0 repeat fixed;
 	background-size:cover;
-	padding-bottom:5%
+	padding-bottom:5%;
 }
 #box7{
 	background:url('../images/sp5.png') 50% 0 repeat fixed;
 	background-size:cover;
-	padding-bottom:5%
+	padding-bottom:5%;
 }
 #box8{
 	background:url('../images/pa_bg.png') 50% 0 repeat fixed;
 	background-size:cover;
-	padding-bottom:5%
+	padding-bottom:5%;
 }
 
 
